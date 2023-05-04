@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Light</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <img src="img/bg.jpg" alt="bg" id="bg">
+        <img src="img/moon.png" alt="moon" id="moon">
+        <img src="img/mountain.png" alt="mountain" id="mountain">
+        <img src="img/road.png" alt="road" id="road">
+        <h2 class="text" id="text">Moon Light</h2>
+    </section>
+    <section class="content">
+        <h3>🎧 Infinit - Moonlight</h3>
+        <p>유난히 어두운 밤 사랑이 달빛을 타고 내려 몰래 내 맘에 흘려내려 가슴이 뛰는 밤 
+        시도 때도 없이 아른거려 넌 왜 어떻게 들어왔니 I think about you 칠흙 같은 어둠을 뚫고 다가온 그 맘 아깝지 않게 지켜줄게 너를 Moonlight 너에게 가는 길을 비춰라 달려가 안을 수 있게<br><br>
+        Moonlight 너무나 아름다운 이 밤에 끝을 잡을 수 있게 환한 달빛처럼 (달빛처럼) 달빛처럼 내게 웃어줘 난 그거 하나면 돼 저 하늘빛처럼 빛처럼 달 비추는 밤에 네게 닿을 수 있게 아무 말하지 마 내게 허락 없이 들어와서 품에 몰래 잠들어 놓고 꿈에서 깨지 마 우리 둘 사이를 질투한 태양이 질 때까지 참아줘 어느 순간 갑자기 너 사라지지만 말아줘 아침이 올 때쯤엔 이뤄질 수 있게 <br><br>
+        Moonlight 너에게 가는 길을 비춰라 달려가 안을 수 있게 Moonlight 너무나 아름다운 이 밤에 끝을 잡을 수 있게 깊은 내 맘을 몰라 줄까 봐 oh yeah 저 달에 기대어 고백할게 oh yeah <br><br>
+        밤하늘에 소리친다 널 사랑해 터질듯한 이런 내 맘이 전해질 수 있게 
+        Moonlight 너에게 가는 길을 비춰라 달려가 안을 수 있게 Moonlight 너무나 아름다운 이 밤에 끝을 잡을 수 있게 환한 달빛처럼 달빛처럼 달빛처럼 내게 웃어줘 난 그거 하나면 돼 저 하늘빛처럼 달빛처럼 달 비추는 밤에 네게 닿을 수 있게 끝나지 않길</p>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        let bg =$('#bg');
+        let moon =$('#moon');
+        let mountain =$('#mountain');
+        let road =$('#road');
+        let text =$('#text');
+
+        $(window).scroll(function(){
+            let value =$(this).scrollTop();
+            console.log(value)
+
+            moon.css({left:-value*0.2+'px',top:value*0.35+'px'})
+            bg.css({top:value*0.2+"px"})
+            mountain.css({top:-value*0.15+'px'})
+            road.css({top:value*0.15+'px'})
+            text.css({top:value+'px'})
+        });
+    </script>
+</body>
+</html>
